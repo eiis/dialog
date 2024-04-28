@@ -5,6 +5,7 @@ export function dialog(component:any, props={},modalProps={}) {
   const _modal={
     //dev 第一次提交的代码
     //dev 第二次提交的代码
+    //dev 第三次提交的代码
     render() {
       return h(Modal, {
         open: true,
