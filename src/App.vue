@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue';
 import { dialog } from './utils/dialog';
+import EventEmitter from './utils/bus'
+
+const ee = new EventEmitter()
 const showModal = () => {
   const unmount = dialog(HelloWorld,{
     msg: 'Hello Vue3'
@@ -11,6 +14,14 @@ const showModal = () => {
   })
 };
 
+ee.on('showModal',()=>{
+  showModal()
+})
+
+const click=()=>{
+  ee.emit('showModal')
+}
+
 </script>
 
 <template>
@@ -18,6 +29,7 @@ const showModal = () => {
     <p class="test8">8px</p>
     <p class="test10">10px</p>
     <p class="test12">12px</p>
+    <a-button type="primary" @click="click">Open Button</a-button>
     <a-button type="primary" @click="showModal">Open Modal</a-button>
   </div>
 </template>
