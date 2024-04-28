@@ -18,6 +18,7 @@ export function dialog(component:any, props={},modalProps={}) {
     //master 第二次提交的代码
     //dev 第十一次提交的代码
     //dev 第十二次提交的代码
+    //dev 第十四次提交的代码
     render() {
       return h(Modal, {
         open: true,
