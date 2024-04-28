@@ -8,7 +8,6 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     AButton: typeof import('ant-design-vue/es')['Button']
-    AModal: typeof import('ant-design-vue/es')['Modal']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
   }
 }

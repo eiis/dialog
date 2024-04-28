@@ -15,7 +15,24 @@ const showModal = () => {
 
 <template>
   <div>
-    <a-button type="primary">Primary Button</a-button>
+    <p class="test8">8px</p>
+    <p class="test10">10px</p>
+    <p class="test12">12px</p>
     <a-button type="primary" @click="showModal">Open Modal</a-button>
   </div>
 </template>
+
+<style scoped>
+.test8 {
+  font-size: 8px;
+  margin-bottom: 10px;
+}
+.test10 {
+  font-size: 10px;
+  margin-bottom: 10px;
+}
+.test12 {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+</style>
